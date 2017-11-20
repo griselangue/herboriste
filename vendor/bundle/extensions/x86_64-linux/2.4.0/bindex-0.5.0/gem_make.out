@@ -1,0 +1,15 @@
+current directory: /mnt/Annexes/herboriste/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+/usr/bin/ruby -r ./siteconf20171120-2630-rm7zuw.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/Annexes/herboriste/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" clean
+
+current directory: /mnt/Annexes/herboriste/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR="
+compiling cruby.c
+linking shared-object bindex/cruby.so
+
+current directory: /mnt/Annexes/herboriste/vendor/bundle/gems/bindex-0.5.0/ext/bindex
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20171120-2630-3zua2x/bindex
