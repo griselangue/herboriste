@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @poison.action %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @poison.medium %>
+</p>
+
+<p>
+  <strong>Toxicite:</strong>
+  <%= @poison.toxicite %>
+</p>
+
+<p>
+  <strong>Partieplante:</strong>
+  <%= @poison.partiePlante %>
+</p>
+
+<p>
+  <strong>Infocomplementaire:</strong>
+  <%= @poison.infoComplementaire %>
+</p>
+
+<p>
+  <strong>Plante:</strong>
+  <%= @poison.plante %>
+</p>
+
+<%= link_to 'Edit', edit_poison_path(@poison) %> |
+<%= link_to 'Back', poisons_path %>

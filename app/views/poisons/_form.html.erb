@@ -1,0 +1,47 @@
+<%= form_with(model: poison, local: true) do |form| %>
+  <% if poison.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(poison.errors.count, "error") %> prohibited this poison from being saved:</h2>
+
+      <ul>
+      <% poison.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :action %>
+    <%= form.text_field :action, id: :poison_action %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medium %>
+    <%= form.text_field :medium, id: :poison_medium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toxicite %>
+    <%= form.text_field :toxicite, id: :poison_toxicite %>
+  </div>
+
+  <div class="field">
+    <%= form.label :partiePlante %>
+    <%= form.text_field :partiePlante, id: :poison_partiePlante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :infoComplementaire %>
+    <%= form.text_area :infoComplementaire, id: :poison_infoComplementaire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plante_id %>
+    <%= form.text_field :plante_id, id: :poison_plante_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

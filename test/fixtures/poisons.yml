@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  action: MyString
+  medium: MyString
+  toxicite: MyString
+  partiePlante: MyString
+  infoComplementaire: MyText
+  plante: one
+
+two:
+  action: MyString
+  medium: MyString
+  toxicite: MyString
+  partiePlante: MyString
+  infoComplementaire: MyText
+  plante: two
