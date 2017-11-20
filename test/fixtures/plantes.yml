@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nomCommun: MyString
+  nomScientifique: MyString
+  description: MyText
+  dimension: MyString
+  fleur: MyString
+  tige: MyString
+  feuille: MyString
+  racine: MyString
+  fruit: MyString
+
+two:
+  nomCommun: MyString
+  nomScientifique: MyString
+  description: MyText
+  dimension: MyString
+  fleur: MyString
+  tige: MyString
+  feuille: MyString
+  racine: MyString
+  fruit: MyString

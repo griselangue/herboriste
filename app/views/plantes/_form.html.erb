@@ -1,0 +1,62 @@
+<%= form_with(model: plante, local: true) do |form| %>
+  <% if plante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plante.errors.count, "error") %> prohibited this plante from being saved:</h2>
+
+      <ul>
+      <% plante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomCommun %>
+    <%= form.text_field :nomCommun, id: :plante_nomCommun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomScientifique %>
+    <%= form.text_field :nomScientifique, id: :plante_nomScientifique %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :plante_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dimension %>
+    <%= form.text_field :dimension, id: :plante_dimension %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fleur %>
+    <%= form.text_field :fleur, id: :plante_fleur %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tige %>
+    <%= form.text_field :tige, id: :plante_tige %>
+  </div>
+
+  <div class="field">
+    <%= form.label :feuille %>
+    <%= form.text_field :feuille, id: :plante_feuille %>
+  </div>
+
+  <div class="field">
+    <%= form.label :racine %>
+    <%= form.text_field :racine, id: :plante_racine %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fruit %>
+    <%= form.text_field :fruit, id: :plante_fruit %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
