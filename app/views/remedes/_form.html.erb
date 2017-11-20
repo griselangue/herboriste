@@ -1,0 +1,42 @@
+<%= form_with(model: remede, local: true) do |form| %>
+  <% if remede.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(remede.errors.count, "error") %> prohibited this remede from being saved:</h2>
+
+      <ul>
+      <% remede.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :modeAdministration %>
+    <%= form.text_field :modeAdministration, id: :remede_modeAdministration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :partiePlante %>
+    <%= form.text_field :partiePlante, id: :remede_partiePlante %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maux %>
+    <%= form.text_field :maux, id: :remede_maux %>
+  </div>
+
+  <div class="field">
+    <%= form.label :infoComplementaire %>
+    <%= form.text_area :infoComplementaire, id: :remede_infoComplementaire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plante_id %>
+    <%= form.text_field :plante_id, id: :remede_plante_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

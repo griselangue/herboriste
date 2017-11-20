@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Remedes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modeadministration</th>
+      <th>Partieplante</th>
+      <th>Maux</th>
+      <th>Infocomplementaire</th>
+      <th>Plante</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @remedes.each do |remede| %>
+      <tr>
+        <td><%= remede.modeAdministration %></td>
+        <td><%= remede.partiePlante %></td>
+        <td><%= remede.maux %></td>
+        <td><%= remede.infoComplementaire %></td>
+        <td><%= remede.plante %></td>
+        <td><%= link_to 'Show', remede %></td>
+        <td><%= link_to 'Edit', edit_remede_path(remede) %></td>
+        <td><%= link_to 'Destroy', remede, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Remede', new_remede_path %>

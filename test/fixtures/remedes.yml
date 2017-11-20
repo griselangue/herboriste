@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  modeAdministration: MyString
+  partiePlante: MyString
+  maux: MyString
+  infoComplementaire: MyText
+  plante: one
+
+two:
+  modeAdministration: MyString
+  partiePlante: MyString
+  maux: MyString
+  infoComplementaire: MyText
+  plante: two

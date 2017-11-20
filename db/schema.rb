@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120152254) do
+ActiveRecord::Schema.define(version: 20171120181216) do
 
   create_table "plantes", force: :cascade do |t|
     t.string "nomCommun"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20171120152254) do
     t.string "fruit"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "remedes", force: :cascade do |t|
+    t.string "modeAdministration"
+    t.string "partiePlante"
+    t.string "maux"
+    t.text "infoComplementaire"
+    t.integer "plante_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plante_id"], name: "index_remedes_on_plante_id"
   end
 
 end
