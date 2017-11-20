@@ -1,5 +1,10 @@
 class RemedesController < ApplicationController
   before_action :set_remede, only: [:show, :edit, :update, :destroy]
+  before_action :get_plante
+
+  def get_plante
+	  @plante = Plante.find(params[:plante_id])
+  end
 
   # GET /remedes
   # GET /remedes.json
@@ -10,6 +15,7 @@ class RemedesController < ApplicationController
   # GET /remedes/1
   # GET /remedes/1.json
   def show
+	  @remede = @plante.remedes.find(params[:id])
   end
 
   # GET /remedes/new
