@@ -9,7 +9,7 @@ class RemedesController < ApplicationController
   # GET /remedes
   # GET /remedes.json
   def index
-    @remedes = Remede.all
+	  @remedes = @plante.remedes.all
   end
 
   # GET /remedes/1
