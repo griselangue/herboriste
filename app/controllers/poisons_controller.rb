@@ -9,7 +9,7 @@ class PoisonsController < ApplicationController
   # GET /poisons
   # GET /poisons.json
   def index
-	  @poisons = Poison.all
+	  @poisons = @plante.poisons.all
   end
 
   # GET /poisons/1
