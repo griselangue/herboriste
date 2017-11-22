@@ -1,15 +1,21 @@
 class PoisonsController < ApplicationController
   before_action :set_poison, only: [:show, :edit, :update, :destroy]
+  before_action :get_plante
+
+  def get_plante
+	  @plante =  Plante.find(params[:plante_id])
+  end
 
   # GET /poisons
   # GET /poisons.json
   def index
-    @poisons = Poison.all
+	  @poisons = Poison.all
   end
 
   # GET /poisons/1
   # GET /poisons/1.json
   def show
+	  @poison = @plante.poisons.find(params[:id])
   end
 
   # GET /poisons/new
