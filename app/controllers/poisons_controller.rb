@@ -34,7 +34,7 @@ class PoisonsController < ApplicationController
 
     respond_to do |format|
       if @poison.save
-        format.html { redirect_to @poison, notice: 'Poison was successfully created.' }
+        format.html { redirect_to plante_poisons_path, notice: 'Poison was successfully created.' }
         format.json { render :show, status: :created, location: @poison }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class PoisonsController < ApplicationController
   def update
     respond_to do |format|
       if @poison.update(poison_params)
-        format.html { redirect_to @poison, notice: 'Poison was successfully updated.' }
+        format.html { redirect_to plante_poisons_path, notice: 'Poison was successfully updated.' }
         format.json { render :show, status: :ok, location: @poison }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class PoisonsController < ApplicationController
   def destroy
     @poison.destroy
     respond_to do |format|
-      format.html { redirect_to poisons_url, notice: 'Poison was successfully destroyed.' }
+      format.html { redirect_to plante_poisons_path, notice: 'Poison was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
