@@ -34,7 +34,7 @@ class RemedesController < ApplicationController
 
     respond_to do |format|
       if @remede.save
-        format.html { redirect_to @remede, notice: 'Remede was successfully created.' }
+        format.html { redirect_to plante_remedes_path, notice: 'Remede was successfully created.' }
         format.json { render :show, status: :created, location: @remede }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class RemedesController < ApplicationController
   def update
     respond_to do |format|
       if @remede.update(remede_params)
-        format.html { redirect_to @remede, notice: 'Remede was successfully updated.' }
+        format.html { redirect_to plante_remedes_path, notice: 'Remede was successfully updated.' }
         format.json { render :show, status: :ok, location: @remede }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class RemedesController < ApplicationController
   def destroy
     @remede.destroy
     respond_to do |format|
-      format.html { redirect_to remedes_url, notice: 'Remede was successfully destroyed.' }
+      format.html { redirect_to plante_remedes_path, notice: 'Remede was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
