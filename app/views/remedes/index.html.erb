@@ -22,9 +22,9 @@
         <td><%= remede.maux %></td>
         <td><%= remede.infoComplementaire %></td>
         <td><%= remede.plante %></td>
-        <td><%= link_to 'Show', remede %></td>
-        <td><%= link_to 'Edit', edit_remede_path(remede) %></td>
-        <td><%= link_to 'Destroy', remede, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', plante_remede_path(@plante, remede) %></td>
+	<td><%= link_to 'Edit', edit_plante_remede_path(@plante, remede) %></td>
+	<td><%= link_to 'Destroy', [@plante, remede], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Remede', new_remede_path %>
+<%= link_to 'New Remede', new_plante_remede_path(@plante) %>

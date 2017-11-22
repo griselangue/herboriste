@@ -1,4 +1,4 @@
-<%= form_with(model: remede, local: true) do |form| %>
+<%= form_for([@plante, @remede]) do |form| %>
   <% if remede.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(remede.errors.count, "error") %> prohibited this remede from being saved:</h2>
