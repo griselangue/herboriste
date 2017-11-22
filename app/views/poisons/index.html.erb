@@ -24,9 +24,9 @@
         <td><%= poison.partiePlante %></td>
         <td><%= poison.infoComplementaire %></td>
         <td><%= poison.plante %></td>
-        <td><%= link_to 'Show', poison %></td>
-        <td><%= link_to 'Edit', edit_poison_path(poison) %></td>
-        <td><%= link_to 'Destroy', poison, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', plante_poison_path(@plante, poison) %></td>
+        <td><%= link_to 'Edit', edit_plante_poison_path(@plante, poison) %></td>
+        <td><%= link_to 'Destroy', [@plante, poison], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Poison', new_poison_path %>
+<%= link_to 'New Poison', new_plante_poison_path %>
