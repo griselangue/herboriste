@@ -21,7 +21,7 @@
         <td><%= remede.partiePlante %></td>
         <td><%= remede.maux %></td>
         <td><%= remede.infoComplementaire %></td>
-        <td><%= remede.plante %></td>
+        <td><%= remede.plante.nomScientifique %></td>
         <td><%= link_to 'Show', plante_remede_path(@plante, remede) %></td>
 	<td><%= link_to 'Edit', edit_plante_remede_path(@plante, remede) %></td>
 	<td><%= link_to 'Destroy', [@plante, remede], method: :delete, data: { confirm: 'Are you sure?' } %></td>
