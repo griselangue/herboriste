@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+	<h1>
+		<strong>Plante:</strong>
+		<%= @remede.plante.nomScientifique %>
+	</h1>
+</p>
+
+<p>
   <strong>Modeadministration:</strong>
   <%= @remede.modeAdministration %>
 </p>
@@ -20,9 +27,5 @@
   <%= @remede.infoComplementaire %>
 </p>
 
-<p>
-  <strong>Plante:</strong>
-  <%= @remede.plante %>
-</p>
 
 <%= link_to 'Edit', edit_plante_remede_path(@remede) %> |
