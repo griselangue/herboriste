@@ -4,7 +4,7 @@ class PlantesController < ApplicationController
   # GET /plantes
   # GET /plantes.json
   def index
-    @plantes = Plante.all
+	  @plantes = Plante.all.order(:nomCommun)
   end
 
   # GET /plantes/1
