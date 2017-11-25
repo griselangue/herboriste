@@ -33,7 +33,7 @@
 
   <div class="field">
     <%= form.label :plante_id %>
-    <%= form.number_field :plante_id, id: :remede_plante_id %>
+    <%= collection_select(:remede, :plante_id, Plante.all, :id, :nomCommun) %>
   </div>
 
   <div class="actions">
