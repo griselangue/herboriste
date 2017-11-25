@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Plante:</strong>
+  <%= @poison.plante.nomScientifique%>
+</p>
+
+<p>
   <strong>Action:</strong>
   <%= @poison.action %>
 </p>
@@ -23,11 +28,6 @@
 <p>
   <strong>Infocomplementaire:</strong>
   <%= @poison.infoComplementaire %>
-</p>
-
-<p>
-  <strong>Plante:</strong>
-  <%= @poison.plante %>
 </p>
 
 <%= link_to 'Edit', edit_plante_poison_path(@poison) %> |

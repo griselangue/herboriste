@@ -23,7 +23,7 @@
         <td><%= poison.toxicite %></td>
         <td><%= poison.partiePlante %></td>
         <td><%= poison.infoComplementaire %></td>
-        <td><%= poison.plante %></td>
+        <td><%= poison.plante.nomScientifique %></td>
         <td><%= link_to 'Show', plante_poison_path(@plante, poison) %></td>
         <td><%= link_to 'Edit', edit_plante_poison_path(@plante, poison) %></td>
         <td><%= link_to 'Destroy', [@plante, poison], method: :delete, data: { confirm: 'Are you sure?' } %></td>
