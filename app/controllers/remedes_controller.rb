@@ -16,6 +16,7 @@ class RemedesController < ApplicationController
   # GET /remedes/1.json
   def show
 	  @remede = @plante.remedes.find(params[:id])
+	  fresh_when(@remede)
   end
 
   # GET /remedes/new

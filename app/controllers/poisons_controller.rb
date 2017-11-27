@@ -16,6 +16,7 @@ class PoisonsController < ApplicationController
   # GET /poisons/1.json
   def show
 	  @poison = @plante.poisons.find(params[:id])
+	  fresh_when(@poison)
   end
 
   # GET /poisons/new

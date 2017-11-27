@@ -10,6 +10,7 @@ class PlantesController < ApplicationController
   # GET /plantes/1
   # GET /plantes/1.json
   def show
+	  fresh_when(@gplante)
   end
 
   # GET /plantes/new
